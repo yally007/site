@@ -1,0 +1,107 @@
+/* Resetando estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #d4af37; /* Dourado */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* Banner */
+.banner {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.banner button {
+    padding: 15px 30px;
+    background-color: #d4af37; /* Dourado */
+    border: none;
+    color: #000;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    background-color: #b68929;
+}
+
+/* Categorias de Produtos */
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #222;
+}
+
+.categoria {
+    text-align: center;
+}
+
+.categoria img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.categoria h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+}
