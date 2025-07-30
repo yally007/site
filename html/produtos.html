@@ -82,31 +82,44 @@
 
     <section class="catalogo">
         <h2>Nosso Catálogo de Perfumes</h2>
-        <div class="produtos">
-            <div class="produto">
-                <img src="le.male.parfum.png" alt="Perfume 1">
-                <h3>Perfume Floral</h3>
-                <p class="descricao">Uma fragrância leve e fresca, ideal para o dia a dia.</p>
-                <p class="preco">R$ 199,90</p>
-                <button>Comprar</button>
-            </div>
+        <div class="produto">
+    <img src="le.male.parfum.png" alt="Perfume 1">
+    <h3>Perfume Floral</h3>
+    <p class="descricao">Uma fragrância leve e fresca, ideal para o dia a dia.</p>
+    <p class="preco">R$ 649,90</p>
+    <button class="comprar-btn">Comprar</button>
+</div>
 
             <div class="produto">
-                <img src="myslf.webp" alt="Perfume 2">
-                <h3>Perfume Amadeirado</h3>
-                <p class="descricao">Elegante e sofisticado, para ocasiões especiais.</p>
-                <p class="preco">R$ 249,90</p>
-                <button>Comprar</button>
-            </div>
+    <img src="myslf.webp" alt="Perfume 1">
+    <h3>Perfume Floral</h3>
+    <p class="descricao">Uma fragrância leve e fresca, ideal para o dia a dia.</p>
+    <p class="preco">R$ 719,90</p>
+    <button class="comprar-btn">Comprar</button>
+</div>
 
             <div class="produto">
-                <img src="clubdenuit.png" alt="Perfume 3">
-                <h3>Perfume Oriental</h3>
-                <p class="descricao">Intenso e marcante, para quem gosta de perfumes exóticos.</p>
-                <p class="preco">R$ 299,90</p>
-                <button>Comprar</button>
+    <img src="clubdenuit.png" alt="Perfume 1">
+    <h3>Perfume Floral</h3>
+    <p class="descricao">Uma fragrância leve e fresca, ideal para o dia a dia.</p>
+    <p class="preco">R$ 449,90</p>
+    <button class="comprar-btn">Comprar</button>
+</div>
+
+
             </div>
         </div>
     </section>
 
-    
+    <!-- Carrinho -->
+<div id="carrinho">
+    <h2>Carrinho de Compras</h2>
+    <div id="vazio" style="display: none;">Carrinho vazio</div>
+    <div id="itens-carrinho"></div> <!-- Onde os itens do carrinho aparecerão -->
+    <div id="total"></div> <!-- Total do carrinho -->
+    <button id="finalizar-compra">Finalizar Compra</button>
+</div>
+<div id="itens-carrinho">
+    <!-- Os itens do carrinho serão inseridos aqui pelo JavaScript -->
+</div>
+<div id="total"></div> <!-- Aqui o total será atualizado -->
