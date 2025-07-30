@@ -88,3 +88,69 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+// Array para armazenar os itens no carrinho
+let carrinho = [];
+
+// Função para adicionar um item ao carrinho
+function adicionarAoCarrinho(nome, preco, imagem) {
+    // Verifica se o item já existe no carrinho
+    const itemExistente = carrinho.find(item => item.nome === nome);
+    
+    if (itemExistente) {
+        // Se já existir, incrementa a quantidade
+        itemExistente.quantidade++;
+    } else {
+        // Caso contrário, adiciona o item ao carrinho
+        carrinho.push({ nome, preco, quantidade: 1, imagem });
+    }
+
+    // Atualiza o carrinho na interface
+    atualizarCarrinho();
+}
+
+// Função para remover um item do carrinho
+function removerDoCarrinho(nome) {
+    // Remove o item do carrinho
+    carrinho = carrinho.filter(item => item.nome !== nome);
+
+    // Atualiza o carrinho na interface
+    atualizarCarrinho();
+}
+
+// Função para atualizar a exibição do carrinho
+function atualizarCarrinho() {
+    const carrinhoDiv = document.getElementById('itens-carrinho');
+    const totalDiv = document.getElementById('total');
+    const vazioDiv = document.getElementById('vazio');
+
+    // Limpa o carrinho atual na interface
+    carrinhoDiv.innerHTML = '';
+
+    if (carrinho.length === 0) {
+        vazioDiv.style.display = 'block';
+        totalDiv.innerHTML = 'Total: R$ 0,00';
+    } else {
+        vazioDiv.style.display = 'none';
+        let total = 0;
+        carrinho.forEach(item => {
+            // Exibe cada item no carrinho
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('item');
+            itemDiv.innerHTML = `
+                <img src="${item.imagem}" alt="${item.nome}" width="50" />
+                <span>${item.nome}</span>
+                <span>R$ ${item.preco.toFixed(2)}</span>
+                <span>Quantidade: ${item.quantidade}</span>
+                <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
+            `;
+            carrinhoDiv.appendChild(itemDiv);
+
+            // Soma o preço total
+            total += item.preco * item.quantidade;
+        });
+
+        // Atualiza o total
+        totalDiv.innerHTML = `Total: R$ ${total.toFixed(2)}`;
+    }
+}
+
