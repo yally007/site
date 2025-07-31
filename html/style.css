@@ -303,3 +303,64 @@ produtos.forEach(produto => {
 document.querySelector('.banner button').addEventListener('click', function() {
     document.getElementById('loja').scrollIntoView({ behavior: 'smooth' });
 });
+/* Estilo para a página de contato */
+#contato {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.informacoes p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.formulario {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario button {
+    background-color: #d4af37;
+    color: #000;
+    padding: 12px 20px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #b68929;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
